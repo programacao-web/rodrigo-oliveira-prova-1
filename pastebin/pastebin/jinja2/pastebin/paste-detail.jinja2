@@ -2,13 +2,12 @@
 
 {% block header %}
   <header>
-    <h1 class="paste-header">{{ title }}</h1>
+    <h1 class="paste-header">{{paste.title}}</h1>
   </header>
 {% endblock %}
 
 {% block main %}
   <main class="paste-detail">
-    <h1>{{paste.title}}</h1>  
     <h2>{{paste.language}}</h2>
     {{paste.content|safe}}
   </main>

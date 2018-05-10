@@ -8,12 +8,8 @@
 
 {% block main %}
   <main class="paste-detail">
-    <h2>Questão 2</h2>
-    <p>Conteúdo do Paste.</p>
-    <ul>
-      <li>50% - mostra conteúdo</li>
-      <li>70% - mostra como código formatado</li>
-      <li>100% - syntax highlight. (Dicas: pygments, prims.js)</li>
-    </ul>
+    <h1>{{paste.title}}</h1>  
+    <h2>{{paste.language}}</h2>
+    {{paste.content|safe}}
   </main>
 {% endblock %}

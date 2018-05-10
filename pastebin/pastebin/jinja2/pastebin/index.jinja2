@@ -7,12 +7,13 @@
 {% endblock %}
 
 {% block main %}
+  </div>
   <main class="paste-form">
-    <h2>Questao 1</h2>
-    <p>Deve mostrar um formulário em que o usuário pode criar um novo 
-    paste.</p>
-    <p>Cada paste deve conter um título, uma linguagem e o conteúdo.</p>
-    <p>Linguagens reconhecidas: Python, Javascript e Outros</p>
-    <p>Existem questões ocultas! Procure no código</p>
+    <div>
+      <form action="http://127.0.0.1:8000/paste/create/" method="post">
+        <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+        {{ form }}
+        <input type="submit" value="Submit" />
+      </form>
   </main>
 {% endblock %}

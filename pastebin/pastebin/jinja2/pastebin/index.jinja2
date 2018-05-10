@@ -12,7 +12,9 @@
     <div>
       <form action="http://127.0.0.1:8000/paste/create/" method="post">
         <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
-        {{ form }}
+        {{ form.title }}<br>
+        {{ form.language }}<br>
+        {{ form.content }}<br>       
         <input type="submit" value="Submit" />
       </form>
   </main>
